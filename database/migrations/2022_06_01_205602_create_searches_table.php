@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSearchTable extends Migration
+class CreateSearchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSearchTable extends Migration
      */
     public function up()
     {
-        Schema::create('search', function (Blueprint $table) {
+        Schema::create('searches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('country_id');
@@ -29,6 +29,6 @@ class CreateSearchTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('search');
+        Schema::dropIfExists('searches');
     }
 }
