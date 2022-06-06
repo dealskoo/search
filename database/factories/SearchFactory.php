@@ -24,7 +24,7 @@ class SearchFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'country_id' => Country::factory()->create()
+            'country_id' => Country::factory()
         ];
     }
 }
