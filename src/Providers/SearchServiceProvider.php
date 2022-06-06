@@ -44,7 +44,7 @@ class SearchServiceProvider extends ServiceProvider
             $menu->route('admin.searches.index', 'search::search.searches', [], ['permission' => 'searches.index']);
         });
 
-        PermissionManager::add(new Permission('searches.index', 'Search Lists'));
+        PermissionManager::add(new Permission('searches.index', 'Search List'));
         PermissionManager::add(new Permission('searches.show', 'View Search'), 'searches.index');
         PermissionManager::add(new Permission('searches.create', 'Create Search'), 'searches.index');
         PermissionManager::add(new Permission('searches.edit', 'Edit Search'), 'searches.index');
